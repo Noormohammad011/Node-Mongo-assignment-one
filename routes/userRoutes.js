@@ -18,7 +18,7 @@ router.route('/all').get(getAllUsers)
 router.route('/save').post(saveUser)
 router.route('/update/:id').put(updateUser)
 router.route('/delete/:id').delete(deleteUser)
-router.route('/bulk-update').put(bulkUpdateUser)
+router.route('/bulk-update').patch(bulkUpdateUser)
 
 
 
