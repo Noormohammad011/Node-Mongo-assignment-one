@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1",
+    "gender": "Male",
+    "name": "John",
+    "contact": "020203893",
+    "address": "horipur",
+    "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  },
+  {
+    "Id": "2",
+    "gender": "Male",
+    "name": "John",
+    "contact": "020203893",
+    "address": "horipur",
+    "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  },
+  {
+    "Id": "3",
+    "gender": "Male",
+    "name": "John",
+    "contact": "020203893",
+    "address": "horipur",
+    "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  },
+  {
+    "Id": "f7118b78-88a9-4b29-a632-eca7cf6067ec",
+    "gender": "Male",
+    "name": "John",
+    "contact": "020203893",
+    "address": "horipur",
+    "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  },
+  {
+    "Id": "6f107fc4-4a3e-4973-8bec-c74c98f2ce75",
+    "gender": "Male",
+    "name": "John",
+    "contact": "020203893",
+    "address": "horipur",
+    "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  }
+]
