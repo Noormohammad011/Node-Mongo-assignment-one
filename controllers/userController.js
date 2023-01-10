@@ -84,30 +84,22 @@ const bulkUpdateUser = asyncHandler(async (req, res) => {
   if (!req.body.userIds || !Array.isArray(req.body.userIds)) {
     return res.status(400).send({ error: 'Invalid request body' })
   }
-  
-  fs.readFile(new URL('../data/user.json', import.meta.url), 'utf8', (err, data) => { 
-    if (err) {
-      return res.status(500).send({ error: 'Error reading file' })
+  const userIds = req.body.userIds
+  const { data } = req.body
+  const findUser = userData.filter((user) => userIds.includes(user.Id))
+  const updateUser = findUser.map((user) => {
+    return {
+      Id: user.Id,
+      gender: data.gender || user.gender,
+      name: data.name || user.name,
+      contact: data.contact || user.contact,
+      address: data.address || user.address,
+      photoUrl: data.photoUrl || user.photoUrl,
     }
-    const users = JSON.parse(data)
-    const updatedUsers = users.map((user) => { 
-      if (req.body.userIds.includes(user.Id)) { 
-        user.gender = req.body.gender || user.gender
-        user.name = req.body.name || user.name
-        user.contact = req.body.contact || user.contact
-        user.address = req.body.address || user.address
-        user.photoUrl = req.body.photoUrl || user.photoUrl
-      }
-    })
-    fs.writeFile(new URL('../data/user.json', import.meta.url), JSON.stringify(updatedUsers), (err) => { 
-      if (err) {
-        return res.status(500).send({ error: 'Error writing file' })
-      }
-      res.json(updatedUsers)
-    })
   })
-  
-
+  res.json({
+    userData: updateUser,
+  })
 })
 
 // @desc    Delete user
@@ -124,8 +116,6 @@ const deleteUser = asyncHandler(async (req, res) => {
     throw new Error('User not found')
   }
 })
-
-
 
 export {
   getRandomUser,
